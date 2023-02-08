@@ -63,10 +63,9 @@ class GameTest {
 
         game.register(olaf);
 
-        int actual = game.round("Sigurd", "Olaf");
-        int expected = 1;
-
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertThrows(NotRegisteredException.class,
+                () -> game.round("Sigurd", "Olaf")
+        );
 
     }
 
@@ -79,10 +78,9 @@ class GameTest {
 
         game.register(sigurd);
 
-        int actual = game.round("Sigurd", "Olaf");
-        int expected = 1;
-
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertThrows(NotRegisteredException.class,
+                () -> game.round("Sigurd", "Olaf")
+        );
 
     }
 
@@ -95,10 +93,9 @@ class GameTest {
 
 
 
-        int actual = game.round("Sigurd", "Olaf");
-        int expected = 1;
-
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertThrows(NotRegisteredException.class,
+                () -> game.round("Sigurd", "Olaf")
+        );
 
     }
 
